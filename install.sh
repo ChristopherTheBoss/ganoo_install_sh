@@ -19,8 +19,9 @@ n
 
 p
 w' | fdisk /dev/sda
-mkfs.xfs /dev/sda3
+mkfs.vfat -F 32 /dev/sda1
 mkswap /dev/sda2
+mkfs.xfs /dev/sda3
 cd /mnt/gentoo
 mount /dev/sda3 .
 mkdir efi
